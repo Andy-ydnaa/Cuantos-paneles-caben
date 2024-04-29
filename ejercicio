@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+  int x, y, anchotecho, largotecho, areatecho, areapanel, cantidadpaneles, menorP, menorT;
+  printf("Ingrese dimensiones de paneles:\n");
+  scanf("%d %d", &x, &y);
+  printf("Ingrese dimensiones del techo:\n");
+  scanf("%d %d", &anchotecho, &largotecho);
+  if (x > y){
+    menorP = y;
+  }
+  else{
+    menorP = x;
+  }
+  if (anchotecho > largotecho){
+    menorT = largotecho;
+  }
+  else{
+    menorT = anchotecho;
+  }
+  if (menorP > menorT){
+    printf("Caben 0 paneles");
+    return 0;
+  }
+  else{
+    areatecho = anchotecho * largotecho;
+    areapanel = x * y;
+    cantidadpaneles = areatecho / areapanel;
+    printf("Caben %d paneles", cantidadpaneles);
+    return 0;
+  }  
+}
